@@ -1,0 +1,25 @@
+<template>
+    <lightning-layout-item >
+    <lightning-card >
+    
+        <div class="slds-m-around_large">
+            <div class="slds-align_absolute-center">
+                <div class="slds-text-heading_medium">
+        <h1 class="slds-text-heading_large">{recordType} Record</h1>
+        <h1 class="slds-text-heading_large">Name:</h1>
+        <h2 class="slds-text-heading_medium">{recordName}</h2>
+        related record
+        <template if:true={relatedRecords}>
+            <ul>
+                <template for:each={relatedRecords} for:item="rec">
+                    
+                    <li key={rec.id}>{rec.type}: {rec.name}</li>
+                </template>
+            </ul>
+        </template>
+        </div>
+    </div>
+</div>
+    </lightning-card>
+</lightning-layout-item>
+</template>
